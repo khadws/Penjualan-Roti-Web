@@ -1,0 +1,561 @@
+:root {
+    --primary: #2E1F1B;
+    --bg: #ffffff;
+    --hover: #ffffff;
+    --hover-button: #6E472C;
+    --button: #8B5E3C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--primary);
+    color: white;
+}
+
+.container-profil {
+    max-width: 80rem;
+    /* 1280px */
+    margin: 0 auto;
+}
+
+.container-profil>*+* {
+    margin-top: 1.5rem;
+    /* 24px */
+}
+
+/*  Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 3%;
+    background-color: #4B2E2B;
+    box-shadow: 0px 2px 5px rgba(1, 1, 3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    color: white;
+}
+
+.navbar .navbar-logo {
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    position: absolute;
+}
+
+.navbar .navbar-nav a {
+    display: inline-block;
+    margin: 0 15px;
+    font-weight: 400;
+}
+
+
+.navbar .navbar-nav a::after {
+
+    display: block;
+    padding-bottom: 0.5px;
+    border-bottom: 2.5px solid;
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+
+.navbar .navbar-extra a {
+    color: black;
+    margin: 0 7px;
+}
+
+.navbar .navbar-extra a:hover {
+    color: #000000;
+}
+
+/* button longin dan dafar */
+.container {
+    text-align: center;
+}
+
+.btn-register,
+.btn-login {
+    background: var(--button);
+    box-shadow: 1px 2px 5px rgba(1, 1, 3);
+    transition: background-color 0.3s ease;
+}
+
+.login-a,
+.register-a {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-register:hover,
+.btn-login:hover {
+    transition: 0.3s;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--hover-button);
+}
+
+/* search input */
+.search-input-container {
+    display: none;
+    align-items: center;
+}
+
+.search-input-container.active {
+    display: flex;
+}
+
+.feather-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    background-image: url(../img/cake.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0%;
+    background: linear-gradient(0deg,
+            rgba(1, 1, 3, 1) 5%,
+            rgba(255, 255, 255, 0) 50%);
+}
+
+.hero h1 {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 6%;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+}
+
+.hero h1 span {
+    color: var(--bg);
+}
+
+.hero p {
+    color: var(--bg);
+    font-size: 20px;
+    font-weight: 400;
+    width: 370px;
+    position: absolute;
+    top: 47%;
+    left: 6%;
+    text-shadow: 1px 1px 5px rgba(1, 1, 1);
+}
+
+.hero a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 63%;
+    left: 6%;
+    width: 200px;
+    height: 45px;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--button);
+    border-radius: 8px;
+    text-shadow: 0px 1px 1px rgba(1, 1, 3);
+    box-shadow: 1px 3px 3px rgba(1, 1, 3);
+    transition: background-color 0.3s ease;
+}
+
+.hero a:hover {
+    background-color: var(--hover-button);
+    color: white;
+}
+
+
+/* rekom section */
+.rekom-text h1 {
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+}
+
+.row-rekom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px;
+    min-height: 70vh;
+}
+
+.container-menu {
+    background-color: white;
+
+}
+
+/* about css */
+
+.about h2 {
+    display: flex;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: left;
+    margin: 6% 0 0 5%;
+}
+
+.about .row-about .isi-1 {
+    position: absolute;
+    margin-top: 5%;
+    font-weight: 500;
+    font-size: 18px;
+    left: 8%;
+    padding: 5px 5px;
+    width: 40%;
+}
+
+.about .row-about .isi-2 {
+    position: absolute;
+    margin-top: 33%;
+    font-weight: 500;
+    font-size: 18px;
+    left: 47%;
+    padding: 5px 5px;
+    width: 45%;
+}
+
+.about .row-about p span {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.about .row-about .about-img {
+    width: 23%;
+    border-radius: 10px;
+    margin: 0 0 0 65%;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.about .row-about .about-img-1 {
+    width: 23%;
+    border-radius: 10px;
+    margin: 8% 0 0 8%;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+/* kategori css */
+.text-kategori h1 {
+    display: flex;
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    justify-content: center;
+    margin: 6% 0 0 0;
+}
+
+
+.row-kategori {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.pilihan-card-kategori {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 0px 4px white;
+    margin: 30px;
+    width: 16%;
+    height: 342px;
+    color: black;
+}
+
+.pilihan-card-kategori img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0px 0px 0px 3px black;
+}
+
+.pilihan-card-tittle-kategori {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    padding: 48px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 0px 0px 3px black;
+}
+
+/* detail csssss */
+.product-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.main-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-product-image {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.product-title {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: #000000;
+}
+
+.description {
+    background-color: white;
+    padding: 16px;
+    margin: 30px 0;
+    border-radius: 8px;
+}
+
+.description h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    margin: 16px 10px;
+    gap: 20px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 50px;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.minus,
+.plus {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 5px 20px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.buy-button {
+    background-color: var(--primary);
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    height: 50px;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    box-shadow: 0px 2px 5px #000000;
+}
+
+.cart-button {
+    background-color: var(--primary);
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    box-shadow: 0px 2px 5px #000000;
+}
+
+.row-saran {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 35px;
+    min-height: 500px;
+}
+
+.text-saran h1 {
+    font-weight: 600;
+    font-size: 28px;
+    margin-left: 60px;
+}
+
+.container-saran {
+    display: flex;
+    padding: 40px;
+}
+
+.card-saran-kue {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px #323232;
+    margin: 15px;
+    width: 15%;
+    height: 12%;
+    gap: 5px;
+}
+
+.img-saran {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.tittle-harga-stok-saran {
+    margin: 0 0 10px 20px;
+    color: black;
+}
+
+.harga-saran-kue {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+}
+
+.stok-saran-kue {
+    font-size: 14px;
+    color: black;
+}
+
+/* detail end */
+
+/* profile */
+.pembungkus {
+    display: flex;
+}
+
+.container-profile {
+    display: flex;
+    width: 100%;
+    padding: 5% 3% 5% 26.5%;
+    justify-content: center;
+}
+
+.container-profil {
+    width: 100%;
+}
+
+.sidebar {
+    box-shadow: 0 0 10px rgba(1, 1, 3);
+    text-align: left;
+}
+
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px 0 0 5px;
+}
+
+.sidebar a.active,
+.sidebar a:focus,
+.sidebar a:hover,
+.sidebar a:active {
+    background-color: #ECB288;
+}
+
+.sidebar a.active {
+    background-color: #ECB288;
+}
+
+/* pesansan */
+
+.tabs {
+    background-color: #F1C5A6;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+.tabs .tab {
+    padding: 7px 17px;
+    background-color: #F1C5A6;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-container p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+/* Kotak Produk */
+.product-box.active {
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+    display: flex;
+}
+
+.product-box {
+    display: none;
+}
+
+/* nyesel ga gae taillwind ket awal, haha */
+/* males ngganti nak css taillwind */
